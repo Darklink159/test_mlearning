@@ -1,0 +1,136 @@
+<
+Book
+long Id
+string Title
+long TeacherId
+long CategoryId
+DateTime UploadDate
+string Description
+long ReadCount
+string LocalImgPath
+string CloudImgPath
+double Prize
+int PagesNum
+>
+<
+Category
+long Id
+string Title
+string Description
+>
+<
+Teacher
+long Id
+long UserId
+>
+<
+Chapter
+long Id
+string Name
+string LocalImgPath
+string CloudImgPath
+long BookId
+>
+<
+Section
+long Id
+string Name
+long ChapterId
+>
+<
+Page
+long Id
+string LocalImgPath
+string CloudImgPath
+long SectionId
+>
+<
+User
+long Id
+string Username
+string Password
+string Name
+string LastName
+string LocalProfileImgPath
+string CloudProfileImgPath
+>
+<
+Course
+long Id
+string Name
+long Duration
+long CategoryId
+long TeacherId
+>
+<
+Use_Course_Book
+long Id
+long CourseId
+long BookId
+>
+<
+Enrollment
+long Id
+long StudentId
+long CourseId
+>
+<
+Student
+long Id
+long UserId
+>
+<
+Favourite_Student_Book
+long Id
+long StudentId
+long BookId
+DateTime Date
+int Rate
+>
+<
+Post
+long Id
+DateTime created_at
+string Text
+long UserId
+long BookId
+>
+<
+Quiz
+long Id
+string Name
+long BookId
+>
+<
+Question
+long Id
+string Text
+long OptionId
+long QuizId
+>
+<
+Option
+long Id
+string Name
+>
+<
+Has_Question_Option
+long Id
+long QuestionId
+long OptionId
+>
+<
+Answer_Student_Question
+long Id
+long StudentId
+long QuestionId
+long OptionId
+>
+<
+Takes_Student_Quiz
+long Id
+long StudentId
+long QuizId
+long Grade
+DateTime Date
+>

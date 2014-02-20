@@ -1,0 +1,10 @@
+     public bool isValidId(string entityName, long id)
+        {
+            using (var redisClient = RedisManager.GetClient())
+            {
+                string key = "urn:" + entityName + ":" + id.ToString();
+
+
+                return redisClient.ContainsKey(key);
+            }
+        }
